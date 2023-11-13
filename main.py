@@ -8,14 +8,15 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv("local.env")
+SELENIUM_DRIVE_PATH = os.getenv("DRIVE_PATH")
+LINKEDIN_JOB_URL = os.getenv("JOB_URL")
 
-service = Service(executable_path="/Users/kajsa/Desktop/Development/chromedriver")
+service = Service(executable_path=SELENIUM-DRIVE-PATH)
 options = webdriver.ChromeOptions()
 options.add_argument("--kiosk")
 driver = webdriver.Chrome(service=service, options=options)
 
-driver.get(
-    "https://www.linkedin.com/jobs/search/?currentJobId=3226485795&f_E=1%2C2&geoId=104738515&keywords=junior%20python%20developer&location=Ireland&refresh=true")
+driver.get(LINKEDIN-JOB-URL)
 
 your_user = os.getenv("YOUR_USER")
 your_pass = os.getenv("YOUR_PASS")
