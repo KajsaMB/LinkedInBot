@@ -11,12 +11,12 @@ load_dotenv("local.env")
 SELENIUM_DRIVE_PATH = os.getenv("DRIVE_PATH")
 LINKEDIN_JOB_URL = os.getenv("JOB_URL")
 
-service = Service(executable_path=SELENIUM-DRIVE-PATH)
+service = Service(executable_path=SELENIUM_DRIVE_PATH)
 options = webdriver.ChromeOptions()
 options.add_argument("--kiosk")
 driver = webdriver.Chrome(service=service, options=options)
 
-driver.get(LINKEDIN-JOB-URL)
+driver.get(LINKEDIN_JOB_URL)
 
 your_user = os.getenv("YOUR_USER")
 your_pass = os.getenv("YOUR_PASS")
